@@ -13,7 +13,7 @@ print("Latitude = {}, Longitude = {}".format(location.latitude, location.longitu
 center_south_y = locator.geocode("Ashkelon, Israel")  # Ashkelon will separate between y center and y south
 print("center south Latitude = {}".format(center_south_y.latitude))
 center_north_y = locator.geocode(
-    "Zikhron Ya'akov, Israel")  # Zichron Ya'akov will separate between y center and y north
+    "11 Hanadiv, Zikhron Ya'akov, Israel")  # Zichron Ya'akov will separate between y center and y north
 print("center north Latitude = {}".format(center_north_y.latitude))
 north_limit_y = (33.3084738447906, 35.772599778631104)
 print("north limit Latitude = " + " " + str(north_limit_y[0]))
@@ -51,7 +51,9 @@ def check_in_north(location):
     return False
 
 
-check_in_israel(address)
-check_in_center(location)
-check_in_north(location)
-check_in_south(location)
+if check_in_israel(address):
+    check_in_center(location)
+    check_in_north(location)
+    check_in_south(location)
+
+
