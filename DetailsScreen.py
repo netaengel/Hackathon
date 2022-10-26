@@ -1,4 +1,3 @@
-# import sys module
 import pygame
 import sys
 
@@ -38,12 +37,12 @@ font = pygame.font.Font('freesansbold.ttf', 32)
 # create a text surface object,
 # on which text is drawn on it.
 title_text = font.render('Enter Your Details:', True, green, blue)
-organ_text = font.render('Organ/Blood:', True, blue, green)
+organ_text = font.render('Organ:', True, blue, green)
 name_text = font.render('First Name:', True, blue, green)
 id_text = font.render('ID:', True, blue, green)
 age_text = font.render('Age:', True, blue, green)
 gender_text = font.render('Gender:', True, blue, green)
-bloodType_text = font.render('Blood Type:', True, blue, green)
+# bloodType_text = font.render('Blood Type:', True, blue, green)
 address_text = font.render('Address:', True, blue, green)
 # create a rectangular object for the
 # text surface object
@@ -82,7 +81,7 @@ while True:
     display_surface.blit(id_text, id_textRect)
     display_surface.blit(age_text, age_textRect)
     display_surface.blit(gender_text, gender_textRect)
-    display_surface.blit(bloodType_text, bloodType_textRect)
+    # display_surface.blit(bloodType_text, bloodType_textRect)
     display_surface.blit(address_text, address_textRect)
 
     # iterate over the list of Event objects
